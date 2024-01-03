@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&family=Poppins:ital,wght@0,300;0,500;1,500&family=Roboto:wght@100;300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    height: 100%;
+    background: hsl(0, 0%, 81%);
+    
+}
+.doc{
+    
+    padding:65px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 10PX;
+}
+.card{
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15)0px 48px 100px 0px;
+    margin-bottom: 10px;
+    
+}
+.cardheader{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cardheader h3{
+    font-size: 15px;
+}
+.cardheader p{
+    opacity: 50%;
+}
+.cardimg{
+    height: 40px;
+    width: 40px;
+    border-radius: 50% ;
+    border: 2px solid hsl(263, 55%, 52%);
+    margin-right: 10px;
+}
+.p1{
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.p2{
+    line-height: 1.4rem;
+    font-weight: 500;
+    font-size: 15px;
+    opacity: 70%;
+}
+.card--bg-purple{
+    background: hsl(263, 55%, 52%);
+    color: white;
+    background-image: url('./bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+}
+.card--bg-greyblue{
+    background: hsl(217, 19%, 35%);
+    color: white;
+    
+}
+.card--bg-blackblue{
+    background: hsl(219, 29%, 14%);
+    color: white;
+    
+}
+.card:nth-of-type(1){
+    grid-column: 1 / 3;
+}
+.card:nth-of-type(4){
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+.card:nth-of-type(5){
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
+
+@media (max-width: 768px){
+    .doc{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .card:nth-of-type(1){
+        grid-column: 1;
+    }
+    .card:nth-of-type(4){
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .card:nth-of-type(5){
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
